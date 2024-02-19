@@ -108,8 +108,7 @@ static void R1_Task(void* pdata)
 			Valve_Ctrl(0);
 		if (kai == 8)
 			Valve_Ctrl(1 << 7);
-		if (kai == 9)
-			Valve_Ctrl(1 << 6);
+		m, ? if (kai == 9) Valve_Ctrl(1 << 6);
 		if (kai == 10)
 			Valve_Ctrl(1 << 5);
 
@@ -117,12 +116,9 @@ static void R1_Task(void* pdata)
 		if (kai == 11) {
 			Valve_Ctrl(255);
 			OSTimeDly(100);
-			while (kai == 11) {
-				kai++;
-				OSTimeDly(100);
-			}
 		}
 	}
+}
 }
 
 // 42
